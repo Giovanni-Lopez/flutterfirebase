@@ -17,18 +17,22 @@ class _Page_ViewState extends State<Page_View> {
         PageView(
           children: [
             page(
+              title: "Pantalla 1",
               color: Colors.purple,
             ),
 
             page(
-              color: Colors.yellow,            
+              title: "Pantalla 2",
+              color: Colors.green,            
             ),
 
             page(
-              color: Colors.black,            
+              title: "Pantalla 3",
+              color: Colors.orange,            
             ),
 
             page(
+              title: "Pantalla 4",
               color: Colors.lime,   
                                
             ),
@@ -70,8 +74,17 @@ class page extends StatelessWidget {
 
         Positioned(
           top: 40,
+          left: 140,
+          right: 0,
+         
           child: Container(
-            child: Text("hola"),
+            width: double.infinity,
+            child: Text(
+              //sirve para poner texto entre pageView
+              title!,
+
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 40),
+            ),
           ),
         ),
         
